@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: k8s-addons-argocd
+  namespace: argocd
+spec:
+  controller:
+    processors:
+      operations: 10
+      status: 20
+    resources:
+      limits:
+        cpu: 2
+        memory: 16000Mi
+      requests:
+        cpu: 2
+        memory: 16000Mi
+  ha:
+    enabled: true
+  server:
+    resources:
+      limits:
+        cpu: 1
+        memory: 8000Mi
+      requests:
+        cpu: 1
+        memory: 8000Mi
