@@ -15,3 +15,7 @@ rules:
   - get  # supports deletion a live object in UI
   - list     # supports viewing live object manifest in UI
   - watch  # supports `argocd app patch`
+  - update
+  - create
+  - patch
+  - delete
