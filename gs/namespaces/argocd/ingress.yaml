@@ -10,7 +10,5 @@ spec:
       - pathType: Prefix
         path: "/"
         backend:
-          service:
-            name: k8s-addons-argocd-server
-            port:
-              number: 80
+          serviceName: k8s-addons-argocd-server
+          servicePort: 80
