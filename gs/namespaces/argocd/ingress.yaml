@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-addons-argocd-server
+spec:
+  rules:
+  - host: "k8s-addons-argocd-server.dev-1.gs.gcp.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: k8s-addons-argocd-server
+            port:
+              number: 80
