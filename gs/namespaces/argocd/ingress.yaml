@@ -7,8 +7,7 @@ spec:
   - host: "k8s-addons-argocd-server.dev-1.gs.gcp.com"
     http:
       paths:
-      - pathType: Prefix
-        path: "/"
+      - path: "/"
         backend:
           serviceName: k8s-addons-argocd-server
           servicePort: 80
