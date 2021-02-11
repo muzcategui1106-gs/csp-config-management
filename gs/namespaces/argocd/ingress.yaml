@@ -2,6 +2,8 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: k8s-addons-argocd-server
+  annotations:
+    kubernetes.io/ingress.class: contour
 spec:
   rules:
   - host: "k8s-addons-argocd-server.dev-1.gs.gcp.com"
